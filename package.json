@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Neo4j Graph Visualization Component",
   "main": "index.js",
-  "license": "GNU",
+  "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --colors --config ./build_scripts/webpack.config.js",
     "devs": "cross-env NODE_ENV=development webpack-dev-server --https --colors --config ./build_scripts/webpack.config.js",
