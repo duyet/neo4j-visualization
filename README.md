@@ -1,7 +1,7 @@
 # Neo4j Graph Visualization
 
 ![Code lint](https://github.com/duyet/neo4j-visualization/workflows/Code%20lint/badge.svg)
-
+![Deploy GH Pages](https://github.com/duyet/neo4j-visualization/workflows/Deploy%20GH%20Pages/badge.svg)
 
 ## Live demo
 
