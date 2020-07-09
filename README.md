@@ -1,5 +1,8 @@
 # Neo4j Graph Visualization
 
+![Code lint](https://github.com/duyet/neo4j-visualization/workflows/Code%20lint/badge.svg)
+
+
 ## Live demo
 
 https://duyet.github.io/neo4j-visualization/
