@@ -1,0 +1,58 @@
+{
+  "name": "neo4j-visualization",
+  "version": "0.0.1",
+  "description": "Neo4j Graph Visualization Component",
+  "main": "index.js",
+  "license": "GNU",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --colors --config ./build_scripts/webpack.dev.config.js",
+    "devs": "cross-env NODE_ENV=development webpack-dev-server --https --colors --config ./build_scripts/webpack.dev.config.js",
+    "lint": "eslint --fix --ext .js --ext .jsx ./",
+    "build": "cross-env NODE_ENV=production webpack --colors --config ./build_scripts/webpack.config.js"
+  },
+  "engines": {
+    "yarn": "^1.10",
+    "node": "12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-transform-regenerator": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
+    "gh-pages": "^3.1.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "react-hot-loader": "^4.12.21",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@hot-loader/react-dom": "^16.13.0",
+    "@relate-by-ui/css": "^1.0.5",
+    "core-js": "^3.6.5",
+    "d3": "3",
+    "deepmerge": "^4.2.2",
+    "lodash-es": "^4.17.15",
+    "neo4j-driver": "^4.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-svg-inline": "^2.1.1",
+    "redux": "^4.0.5",
+    "request": "^2.88.2",
+    "sanitize-html": "^1.27.0",
+    "styled-components": "^5.1.1",
+    "worker-loader": "^2.0.0"
+  }
+}

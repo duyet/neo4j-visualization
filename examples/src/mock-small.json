@@ -1,0 +1,140 @@
+[
+    {
+      "keys": [
+        "r",
+        "n1",
+        "n2"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1378,
+            "high": 0
+          },
+          "start": {
+            "low": 60,
+            "high": 0
+          },
+          "end": {
+            "low": 1196,
+            "high": 0
+          },
+          "type": "TABLE",
+          "properties": {
+            "publisher_last_updated_epoch_ms": {
+              "low": 773161047,
+              "high": 371
+            }
+          }
+        },
+        {
+          "identity": {
+            "low": 60,
+            "high": 0
+          },
+          "labels": [
+            "Schema"
+          ],
+          "properties": {
+            "name": "Schema",
+            "publisher_last_updated_epoch_ms": {
+              "low": 773151361,
+              "high": 371
+            }
+          }
+        },
+        {
+          "identity": {
+            "low": 1196,
+            "high": 0
+          },
+          "labels": [
+            "Table"
+          ],
+          "properties": {
+            "name": "Table",
+            "publisher_last_updated_epoch_ms": {
+              "low": 773156164,
+              "high": 371
+            },
+            "is_view": false
+          }
+        }
+      ],
+      "_fieldLookup": {
+        "r": 0,
+        "n1": 1,
+        "n2": 2
+      }
+    },
+    {
+      "keys": [
+        "r",
+        "n1",
+        "n2"
+      ],
+      "length": 3,
+      "_fields": [
+        {
+          "identity": {
+            "low": 1379,
+            "high": 0
+          },
+          "start": {
+            "low": 60,
+            "high": 0
+          },
+          "end": {
+            "low": 1197,
+            "high": 0
+          },
+          "type": "TABLE",
+          "properties": {
+            "publisher_last_updated_epoch_ms": {
+              "low": 773161047,
+              "high": 371
+            }
+          }
+        },
+        {
+          "identity": {
+            "low": 60,
+            "high": 0
+          },
+          "labels": [
+            "Schema"
+          ],
+          "properties": {
+            "name": "Schema",
+            "publisher_last_updated_epoch_ms": {
+              "low": 773151361,
+              "high": 371
+            }
+          }
+        },
+        {
+          "identity": {
+            "low": 1197,
+            "high": 0
+          },
+          "labels": [
+            "Table"
+          ],
+          "properties": {
+            "name": "Table 2",
+            "publisher_last_updated_epoch_ms": {
+              "low": 773156164,
+              "high": 371
+            },
+            "is_view": false
+          }
+        }
+      ],
+      "_fieldLookup": {
+        "r": 0,
+        "n1": 1,
+        "n2": 2
+      }
+    }
+  ]
