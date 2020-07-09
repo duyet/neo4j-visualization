@@ -44,7 +44,7 @@
     "@hot-loader/react-dom": "^16.13.0",
     "@relate-by-ui/css": "^1.0.5",
     "core-js": "^3.6.5",
-    "d3": "3",
+    "d3": "5",
     "deepmerge": "^4.2.2",
     "lodash-es": "^4.17.15",
     "neo4j-driver": "^4.1.0",
