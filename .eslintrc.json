@@ -1,0 +1,42 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["plugin:react/recommended", "prettier"],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-case-declarations": "off",
+    "no-prototype-builtins": "off",
+    "prefer-const": "off",
+    "no-async-promise-executor": "off",
+    "react/jsx-handler-names": "off",
+    "react/jsx-fragments": "off",
+    "react/prop-types": "off",
+    "react/jsx-no-target-blank": "off",
+    "react/jsx-indent": "off",
+    "react/no-deprecated": "warn",
+    "react/display-name": "warn",
+    "react/no-unescaped-entities": "off",
+    "import/no-webpack-loader-syntax": "off"
+  },
+  "globals": {
+    "it": true,
+    "describe": true,
+    "test": true,
+    "jest": true,
+    "expect": true,
+    "beforeAll": true,
+    "afterAll": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "neo": true,
+    "FileReader": true,
+    "Blob": true,
+    "fetch": true
+  },
+  "settings": {
+    "react": {
+      "version": "16.9.0"
+    }
+  }
+}
