@@ -19,7 +19,7 @@ import mockData from 'neo4j-visualization/examples/src/mock-small.json';
 
 const result = { records: mockData };
 
-render(<Visualization result={result} fullscreen={true} />, mountNode);
+render(<Neo4jVisualization result={result} fullscreen={true} />, mountNode);
 ```
 
 ## Development
