@@ -28,12 +28,12 @@ module.exports = {
   node: {
     fs: 'empty'
   },
-  entry: [path.resolve(helpers.sourcePath, 'index.jsx')],
+  entry: [path.resolve(helpers.examplePath, 'index.jsx')],
   output: {
-    filename: 'dist.js',
+    filename: 'index.js',
     chunkFilename: '[name].chunkhash.bundle.js',
     publicPath: '',
-    path: helpers.buildPath,
+    path: helpers.buildExamplePath,
     globalObject: 'this',
     libraryTarget: 'umd'
   },

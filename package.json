@@ -5,10 +5,12 @@
   "main": "index.js",
   "license": "GNU",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --colors --config ./build_scripts/webpack.dev.config.js",
-    "devs": "cross-env NODE_ENV=development webpack-dev-server --https --colors --config ./build_scripts/webpack.dev.config.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --colors --config ./build_scripts/webpack.config.js",
+    "devs": "cross-env NODE_ENV=development webpack-dev-server --https --colors --config ./build_scripts/webpack.config.js",
     "lint": "eslint --fix --ext .js --ext .jsx ./",
-    "build": "cross-env NODE_ENV=production webpack --colors --config ./build_scripts/webpack.config.js"
+    "build": "cross-env NODE_ENV=production webpack --colors --config ./build_scripts/webpack.config.js",
+    "deploy-gh-pages": "gh-pages -d dist",
+    "publish-demo": "yarn build && yarn deploy-gh-pages"
   },
   "engines": {
     "yarn": "^1.10",

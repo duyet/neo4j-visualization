@@ -18,19 +18,33 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-const path = require('path')
-const helpers = require('./webpack-helpers')
-const config = require('./webpack.config')
+import reducer, { NAME, APP_START, getHostedUrl } from './appDuck'
 
-module.exports = {
-  ...config,
-  entry: [path.resolve(helpers.examplePath, 'index.jsx')],
-  output: {
-    filename: 'index.js',
-    chunkFilename: '[name].chunkhash.bundle.js',
-    publicPath: '',
-    path: helpers.buildExamplePath,
-    globalObject: 'this',
-    libraryTarget: 'umd'
-  }
-}
+test('reducer stores hostedUrl', () => {
+  // Given
+  const url = 'xxx'
+  const initState = {}
+  const action = { type: APP_START, url }
+
+  // When
+  const state = reducer(initState, action)
+
+  // Then
+  expect(state.hostedUrl).toEqual(url)
+})
+
+test('selector getHostedUrl returns whats in the store', () => {
+  // Given
+  const url = 'xxx'
+  const initState = {}
+  const action = { type: APP_START, url }
+
+  // Then
+  expect(getHostedUrl({ [NAME]: initState })).toEqual(null)
+
+  // When
+  const state = reducer(initState, action)
+
+  // Then
+  expect(getHostedUrl({ [NAME]: state })).toEqual(url)
+})
