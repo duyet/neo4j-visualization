@@ -31,9 +31,12 @@ import './browser/init'
 const resultHasTruncatedFields = () => false;
 
 export class Visualization extends Component {
-  state = {
-    nodes: [],
-    relationships: []
+  constructor(props) {
+    super(props);
+    this.state = {
+      nodes: [],
+      relationships: []
+    }
   }
 
   componentDidMount() {
