@@ -11,7 +11,7 @@
     "build": "cross-env NODE_ENV=production webpack --colors --config ./build_scripts/webpack.config.js",
     "build-demo": "cross-env NODE_ENV=development webpack --colors --config ./build_scripts/webpack.config.js",
     "deploy-gh-pages": "gh-pages -d examples/dist",
-    "publish-demo": "yarn build && yarn deploy-gh-pages"
+    "publish-demo": "yarn build-demo && yarn deploy-gh-pages"
   },
   "engines": {
     "yarn": "^1.10",
