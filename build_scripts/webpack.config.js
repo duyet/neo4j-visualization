@@ -62,7 +62,13 @@ module.exports = {
         commonjs2: "d3",
         amd: "d3",
         root: "d3"
-    }
+    },
+    "styled-components": {
+        commonjs: "styled-components",
+        commonjs2: "styled-components",
+        amd: "styled-components",
+        root: "styled-components"
+    },
   },
   module: {
     rules
