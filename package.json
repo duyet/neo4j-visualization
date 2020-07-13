@@ -2,19 +2,23 @@
   "name": "neo4j-visualization",
   "version": "0.0.1",
   "description": "Neo4j Graph Visualization Component",
-  "main": "index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --colors --config ./build_scripts/webpack.config.js",
     "devs": "cross-env NODE_ENV=development webpack-dev-server --https --colors --config ./build_scripts/webpack.config.js",
     "lint": "eslint --fix --ext .js --ext .jsx ./",
     "build": "cross-env NODE_ENV=production webpack --colors --config ./build_scripts/webpack.config.js",
+    "build-demo": "cross-env NODE_ENV=development webpack --colors --config ./build_scripts/webpack.config.js",
     "deploy-gh-pages": "gh-pages -d dist",
     "publish-demo": "yarn build && yarn deploy-gh-pages"
   },
   "engines": {
     "yarn": "^1.10",
     "node": "12"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "@babel/core": "7.10.4",
