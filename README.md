@@ -16,8 +16,8 @@ yarn add https://github.com/duyet/neo4j-visualization
 ## Usage
 
 ```js
-import Neo4jVisualization from 'neo4j-visualization';
 import { render } from 'react-dom';
+import Neo4jVisualization from 'neo4j-visualization';
 import mockData from 'neo4j-visualization/examples/src/mock-small.json';
 
 const result = { records: mockData };
