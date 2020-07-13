@@ -27,7 +27,12 @@ module.exports = [
       path.resolve('src'),
       path.resolve('examples/src'),
     ],
-    use: 'babel-loader'
+    use: {
+      loader: 'babel-loader',
+      options: {
+        cacheDirectory: '.babelcache',
+      },
+    },
   },
   {
     test: /\.(png|gif|jpg|svg)$/,

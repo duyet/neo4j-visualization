@@ -26,7 +26,6 @@ import neoGraphStyle from '../graphStyle'
 import { InspectorComponent } from './Inspector'
 import { LegendComponent } from './Legend'
 import { StyledFullSizeContainer } from './styled'
-// import { connect } from 'react-redux'
 
 export const getMaxFieldItems = state =>
   get(state, [NAME, 'maxFieldItems'], initialState.maxFieldItems)
@@ -246,8 +245,5 @@ export class ExplorerComponent extends Component {
     )
   }
 }
-// export const Explorer = connect(state => ({
-//   maxFieldItems: getMaxFieldItems(state)
-// }))(ExplorerComponent)
 
 export const Explorer = ExplorerComponent
