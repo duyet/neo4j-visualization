@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: getPlugins(),
   resolve: {
+    symlinks: false,
     alias: {
       'react-dom': '@hot-loader/react-dom',
       'react': path.resolve(helpers.sourcePath, '../node_modules/react'),
