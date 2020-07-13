@@ -33,7 +33,7 @@ module.exports = {
     filename: 'index.js',
     chunkFilename: '[name].chunkhash.bundle.js',
     publicPath: '',
-    path: helpers.isProduction ? helpers.libPath : helpers.buildExamplePath,
+    path: helpers.isProduction ? helpers.libPath : helpers.exampleBuildPath,
     globalObject: 'this',
     libraryTarget: 'umd'
   },
