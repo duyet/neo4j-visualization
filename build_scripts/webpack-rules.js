@@ -27,6 +27,7 @@ module.exports = [
       path.resolve('src'),
       path.resolve('examples/src'),
     ],
+    exclude: /node_modules/,
     use: {
       loader: 'babel-loader',
       options: {

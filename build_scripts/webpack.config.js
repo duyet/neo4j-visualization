@@ -14,14 +14,15 @@ module.exports = {
     path: helpers.isProduction ? helpers.libPath : helpers.exampleBuildPath,
     library: 'Neo4jVisualization',
     libraryTarget: 'umd',
-    libraryExport: 'default',
-    umdNamedDefine: true
+    umdNamedDefine: true,
   },
   plugins: getPlugins(),
   resolve: {
-    // symlinks: false,
     alias: {
       'react-dom': '@hot-loader/react-dom',
+      'react': path.resolve(helpers.sourcePath, '../node_modules/react'),
+      'neo4j-driver': path.resolve(helpers.sourcePath, '../node_modules/neo4j-driver'),
+      'd3': path.resolve(helpers.sourcePath, '../node_modules/d3'),
       'src-root': path.resolve(helpers.sourcePath),
       'project-root': path.resolve(__dirname, '../'),
       services: path.resolve(helpers.sourcePath, 'shared/services'),
@@ -35,45 +36,37 @@ module.exports = {
     },
     extensions: ['.js', '.jsx']
   },
+  externals: {
+    // Don't bundle react or react-dom
+    react: {
+        commonjs: "react",
+        commonjs2: "react",
+        amd: "React",
+        root: "React"
+    },
+    "react-dom": {
+        commonjs: "react-dom",
+        commonjs2: "react-dom",
+        amd: "ReactDOM",
+        root: "ReactDOM"
+    },
+    "neo4j-driver": {
+        commonjs: "neo4j-driver",
+        commonjs2: "neo4j-driver",
+        amd: "neo4j-driver",
+        root: "neo4j-driver"
+    },
+    "d3": {
+        commonjs: "d3",
+        commonjs2: "d3",
+        amd: "d3",
+        root: "d3"
+    }
+  },
   module: {
     rules
   },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/](react|react-dom|@firebase|d3|codemirror)[\\/]/,
-          name: 'vendor',
-          chunks: 'all'
-        },
-        'cypher-codemirror': {
-          test: /[\\/]node_modules[\\/](cypher-codemirror|cypher-editor-support)[\\/]/,
-          name: 'cypher-codemirror',
-          chunks: 'all',
-          enforce: true
-        },
-        ui: {
-          test: /[\\/]node_modules[\\/](@relate-by-ui|semantic-ui-react)[\\/]/,
-          name: 'ui',
-          chunks: 'all',
-          enforce: true
-        },
-        'neo4j-driver': {
-          test: /[\\/]node_modules[\\/](text-encoding|neo4j-driver)[\\/]/,
-          name: 'neo4j-driver',
-          chunks: 'all',
-          enforce: true
-        },
-        worker: {
-          test: /boltWorker/,
-          name: 'worker',
-          chunks: 'all',
-          enforce: true
-        }
-      }
-    }
-  },
-  devtool: helpers.isProduction ? false : 'inline-source-map',
+  devtool: 'inline-source-map', // helpers.isProduction ? false : 'inline-source-map',
   devServer: {
     host: '0.0.0.0',
     port: 8080,
