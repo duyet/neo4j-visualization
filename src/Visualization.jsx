@@ -101,6 +101,7 @@ export class Visualization extends Component {
           graphStyleData={this.props.graphStyleData}
           updateStyle={this.props.updateStyle}
           getNeighbours={this.props.getNeighbours}
+          onDbClick={this.props.onDbClick}
           nodes={this.state.nodes}
           relationships={this.state.relationships}
           fullscreen={this.props.fullscreen}
@@ -116,5 +117,6 @@ export class Visualization extends Component {
 Visualization.defaultProps = {
   fullscreen: true,
   updateStyle: () => {},
-  getNeighbours: (id, currentNeighbourIds = []) => {}
+  getNeighbours: (id, currentNeighbourIds = []) => {},
+  onDbClick: (node, currentNeighbourIds = []) => {}
 }

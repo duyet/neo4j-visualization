@@ -81,6 +81,10 @@ export class ExplorerComponent extends Component {
   }
 
   getNodeNeighbours(node, currentNeighbours, callback) {
+    if (this.props.onDbClick) {
+      this.props.onDbClick(node, currentNeighbours);
+    }
+
     if (currentNeighbours.length > this.props.maxNeighbours) {
       callback(null, { nodes: [], relationships: [] })
     }
