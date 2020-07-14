@@ -116,3 +116,8 @@ export class Visualization extends Component {
     )
   }
 }
+
+Visualization.defaultProps = {
+  fullscreen: true,
+  updateStyle: () => {}
+}
