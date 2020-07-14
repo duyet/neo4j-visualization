@@ -85,10 +85,6 @@ export class Visualization extends Component {
     })
   }
 
-  getNeighbours(id, currentNeighbourIds = []) {
-    // TODO
-  }
-
   setGraph(graph) {
     this.graph = graph
   }
@@ -104,7 +100,7 @@ export class Visualization extends Component {
           initialNodeDisplay={this.props.initialNodeDisplay}
           graphStyleData={this.props.graphStyleData}
           updateStyle={this.props.updateStyle}
-          getNeighbours={this.getNeighbours.bind(this)}
+          getNeighbours={this.props.getNeighbours}
           nodes={this.state.nodes}
           relationships={this.state.relationships}
           fullscreen={this.props.fullscreen}
@@ -119,5 +115,6 @@ export class Visualization extends Component {
 
 Visualization.defaultProps = {
   fullscreen: true,
-  updateStyle: () => {}
+  updateStyle: () => {},
+  getNeighbours: (id, currentNeighbourIds = []) => {}
 }
