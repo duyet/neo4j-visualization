@@ -31,4 +31,4 @@ jobs:
     - run: |
         git add ./lib && 
         git commit -m "[skip ci] Auto build lib" &&
-        git push 
+        git push || exit 0
