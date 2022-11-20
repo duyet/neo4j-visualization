@@ -52,7 +52,7 @@
     "react-dom": "16.13.1",
     "neo4j-driver": "4.1.0",
     "d3": "3.5.17",
-    "styled-components": "5.1.1"
+    "styled-components": "5.3.6"
   },
   "dependencies": {
     "@hot-loader/react-dom": "^16.13.0",
