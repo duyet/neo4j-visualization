@@ -63,7 +63,7 @@
     "react-svg-inline": "^2.1.1",
     "redux": "^4.0.5",
     "request": "^2.88.2",
-    "sanitize-html": "^1.27.0",
+    "sanitize-html": "^2.0.0",
     "worker-loader": "^3.0.0"
   },
   "peerDependencies": {
